@@ -1,0 +1,49 @@
+img {
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+}
+body{
+    padding:20px;
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;;
+}
+
+.cv{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    'image name'
+    'info_1 info_2 ';
+    gap:6px;
+    margin:0 auto;
+}
+
+.name {
+    grid-area: name;
+}
+.image{
+    grid-area: image;
+    
+}
+
+.info_1{
+    grid-area: info_1;
+    
+}
+.info_2{
+    grid-area :info_2;
+    
+}
+@media screen and (max-width: 600px) {
+    .cv {
+        width: 90%;  
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .cv {
+        width: 90%; 
+    }
+}
